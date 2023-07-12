@@ -3,7 +3,7 @@ var urlPage = window.location.search;
 const urlParams = new URLSearchParams(urlPage);
 const paramCurso = urlParams.get('idCurso');
 
-fetch('../assets/data/superPack.json')
+fetch('./assets/data/superPack.json')
 .then(response => response.json() )
 .then(data => {
     const newArray = data.filter(filtra =>{
