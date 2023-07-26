@@ -55,7 +55,37 @@ fetch('./assets/data/superPack.json')
 
 });
 
+// Captura el nombre y correo del formulario y lo envía a la url
+  const formulario = document.getElementById('miFormulario');
+  const nombreInput = document.getElementById('nombreInput');
+  const correoInput = document.getElementById('correoInput');
 
+  // Agregar eventos 'input' a los inputs de nombre y correo
+  nombreInput.addEventListener('input', actualizarURL);
+  correoInput.addEventListener('input', actualizarURL);
+
+  function actualizarURL() {
+    const nombre = nombreInput.value;
+    const correo = correoInput.value;
+
+    // Obtener los parámetros actuales de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Establecer los valores de nombre y correo en los parámetros
+    urlParams.set('nombre', nombre);
+    urlParams.set('correo', correo);
+
+    // Obtener la URL actual sin los parámetros
+    const baseUrl = window.location.href.split('?')[0];
+
+    // Construir la nueva URL con los parámetros actualizados
+    const nuevaUrl = baseUrl + '?' + urlParams.toString();
+
+    // Actualizar la URL sin recargar la página
+    history.replaceState({}, '', nuevaUrl);
+  }
+
+ 
 
     
 // Botónes de pago de Paypal
@@ -63,8 +93,8 @@ var urlPrice = window.location.search;
 const urlParams2 = new URLSearchParams(urlPrice);
 const paramPrecio = urlParams2.get('precio');
 const product = urlParams2.get('Curso');
-const nombreCliente = "Fredy Moreno";
-const emailCliente = "giovanny58@gmail.es";
+const nombreCliente = urlParams2.get('nombre');
+const emailCliente = urlParams2.get('correo');
 
 function initPayPalButton() {
     paypal.Buttons({
