@@ -54,7 +54,7 @@ fetch('../assets/data/superPack.json')
     // directoPago.createCheckout('id-button', params); 
    
     const btnconfirmarPagos = document.createElement('a');
-    btnconfirmarPagos.href = 'https://api.whatsapp.com/send/?phone=%2B573242793938&text=Hola+Master.+Envío+confirmacion+de+pago:+*Compra:*+'+nombreCurso+'+*Nombre:*+'+paramNombre+'+*Correo:*+'+paramEmail+'+*Referencia Compra:*+'+num+'.'
+    btnconfirmarPagos.href = 'https://api.whatsapp.com/send/?phone=%2B573242937510&text=Hola+Master.+Envío+confirmacion+de+pago:+*Compra:*+'+nombreCurso+'+*Nombre:*+'+paramNombre+'+*Correo:*+'+paramEmail+'+*Referencia Compra:*+'+num+'.'
     btnconfirmarPagos.classList = 'col-6 mx-auto bg-success rounded text-white text-bolder py-1 move-on-hover shadow';
     btnconfirmarPagos.textContent = "Confirmar Pago";
     document.querySelector('.confirmarPago').appendChild(btnconfirmarPagos);
