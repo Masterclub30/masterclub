@@ -60,7 +60,7 @@ fetch('../assets/data/superPack.json')
     document.querySelector('.confirmarPago').appendChild(btnconfirmarPagos);
 
     const imgCurso = document.createElement('img');
-    imgCurso.src = './assets/img/categorias/'+codigoCurso+'/'+idCurso+'.avif' 
+    imgCurso.src = './assets/img/superpack-resumen.png' 
     imgCurso.alt = nombreCurso+ ' de ' + profesor
     imgCurso.title = nombreCurso+ ' de ' + profesor
     imgCurso.style = 'width:70%; padding: 8px;'
@@ -70,7 +70,6 @@ fetch('../assets/data/superPack.json')
 
 
 });
-
 
 
 
