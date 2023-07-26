@@ -64,7 +64,7 @@ fetch('../assets/data/superPack.json')
     imgCurso.alt = nombreCurso+ ' de ' + profesor
     imgCurso.title = nombreCurso+ ' de ' + profesor
     imgCurso.style = 'width:70%; padding: 8px;'
-    imgCurso.classList = 'p-1 border rounded bg-bluedark'
+    imgCurso.classList = 'p-1'
     document.querySelector('.imgCompra').appendChild(imgCurso);
     
 
